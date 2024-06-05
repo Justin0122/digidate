@@ -1,0 +1,41 @@
+{
+    "name": "justin0122/auditing-frontend",
+    "description": "A front-end extension for the owenit auditing package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Justin Jongstra",
+            "email": "justinjongstra7@gmail.com",
+            "homepage": "justinjongstra.nl"
+        }
+    ],
+    "homepage": "https://github.com/justin0122/auditing-frontend",
+    "keywords": ["Laravel", "AuditingFrontend"],
+    "require": {
+        "illuminate/support": "~9"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Justin0122\\AuditingFrontend\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Justin0122\\AuditingFrontend\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Justin0122\\AuditingFrontend\\AuditingFrontendServiceProvider"
+            ],
+            "aliases": {
+                "AuditingFrontend": "Justin0122\\AuditingFrontend\\Facades\\AuditingFrontend"
+            }
+        }
+    }
+}
